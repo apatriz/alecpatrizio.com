@@ -2,28 +2,7 @@
 
 {% load wagtailcore_tags %}
 
-{% block inline_style %}
-    body{
-            background-color: #3a3535;
-            color:#D3DBE5;
-            font-family: "Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
-        }
-        h1{
-            opacity:0;
-            letter-spacing: 10px;
-        }
-        #myname p{
-            padding-right: 10px;
-            opacity:0;
-        }
-        #myname{
-            text-align: center;
-            position:fixed;
-            top: 50%;
-            left:50%;
-            transform: translate(-50%, -50%);"
-        }
-{% endblock inline_style %}
+{% load static %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -33,8 +12,3 @@
         {{ page.body | richtext }}
     </div>
 {% endblock %}
-
-{% block extra_js %}
-        $("#myname h1").delay(500).animate({ opacity: 1}, 2000);
-        $("#myname p").delay(2500).animate({ opacity: 1}, 2000);
-{% endblock extra_js %}

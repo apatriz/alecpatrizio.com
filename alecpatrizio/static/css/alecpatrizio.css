@@ -1,0 +1,20 @@
+body{
+    background-color: #3a3535;
+    color:#D3DBE5;
+    font-family: "Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+}
+h1{
+    opacity:0;
+    letter-spacing: 10px;
+}
+#myname p{
+    padding-right: 10px;
+    opacity:0;
+}
+#myname{
+    text-align: center;
+    position:fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}

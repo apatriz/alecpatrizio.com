@@ -17,7 +17,7 @@
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
-        {% endblock %}
+        {% endblock extra_css%}
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
@@ -31,6 +31,6 @@
 
         {% block extra_js %}
         {# Override this in templates to add extra javascript #}
-        {% endblock %}
+        {% endblock extra_js%}
     </body>
 </html>

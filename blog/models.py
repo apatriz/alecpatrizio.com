@@ -13,6 +13,7 @@ from wagtail.wagtailsearch import index
 
 
 class BlogPage(Page):
+
     main_image = models.ForeignKey(
         'wagtailimages.Image',
         null=True,
@@ -27,6 +28,7 @@ class BlogPage(Page):
     search_fields = Page.search_fields + (
         index.SearchField('intro'),
         index.SearchField('body'),
+        index.FilterField('date'),
     )
 
     content_panels = Page.content_panels + [

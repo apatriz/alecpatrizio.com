@@ -18,6 +18,12 @@
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
         {% endblock %}
+
+        <style type="text/css">
+
+            {% block inline_style %}{% endblock inline_style %}
+
+        </style>
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
@@ -27,9 +33,14 @@
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/alecpatrizio.js' %}"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript">
 
-        {% block extra_js %}
+            {% block extra_js %}
             {# Override this in templates to add extra javascript #}
-        {% endblock %}
+            {% endblock %}
+
+        </script>
+
     </body>
 </html>
